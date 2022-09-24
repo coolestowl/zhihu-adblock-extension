@@ -1,0 +1,18 @@
+{
+	"manifest_version": 2,
+	"name": "广告请求过滤",
+	"version": "0.1",
+	"description": "过滤特定请求中的广告信息",
+	"author": "bugzeng",
+	"content_scripts": [{
+		"matches": [
+			"https://www.zhihu.com/*"
+		],
+		"js": [ "content-script.js" ],
+		"run_at":"document_start"
+	}],
+	"web_accessible_resources": [
+		"zhihu_filter.js",
+		"jquery.min.js"
+	]
+}
