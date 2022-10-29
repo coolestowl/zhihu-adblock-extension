@@ -144,14 +144,11 @@
             return wrapNewResponse(response, JSON.stringify(jsonBody));
         }
 
-        // home_up api
-        if (response.url.includes('commercial_api/banners_v3/home_up')) {
-            return wrapNewResponse(response, JSON.stringify({
-                banner: '',
-            }));
-        }
-
+        // commercial api
         ad_uris = [
+            'commercial_api/banners_v3/home_up',
+            'commercial_api/banners_v3/pc_top_banner',
+            'commercial_api/banners_v3/pc_right_banner',
             'commercial_api/banners_v3/home_bottom',
             'commercial_api/banners_v3/question_up',
             'commercial_api/banners_v3/question_down_sticky',
